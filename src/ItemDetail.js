@@ -1,29 +1,41 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
+import './ItemDetail.css';
 
 
-function ItemDetail(key) {
+function ItemDetail({match}) {
 
-    // useEffect(() => {}, []);
     useEffect(() => {
-      fetchItems();
-      }, []);
+      fetchItem();
+      console.log(match)
+    }, []);
+   
 
-    // const [item, setItem] = useState({});
+    const [item, setItem] = useState({});
 
-    const [items, setItems] = useState({});
-
-    const fetchItems = async () => {
-        const data = await fetch(`https://api.rawg.io/api/games/${key}`);
-        
-        const items = await data.json();
-        console.log(items.id);
-        setItems(items.results);
+    const fetchItem = async () => {
+    const fetchItem = await fetch(`https://api.rawg.io/api/games/${match.params.id}`)       
+    const item = await fetchItem.json();
+    setItem(item)
+    console.log(item)
+      // if (Object.keys(item).map(x => x.includes("platforms"))){
+      //   console.log(item.platforms)
+      // }
     
+    }
+
 
   return (
-    <div>
-        <h1>Item</h1>
+    
+    <div className="detail-container">
+        <h1>{item.name}</h1>
+        <h2>Released: {item.released}</h2>
+        <img alt='' src={item.background_image} className="images" />
+        {/* <h2> Platforms: {item.platforms.map(x => x.platform.name)}</h2> */}
+         {/* {item.ratings[0].count}  */}
+         {/* {item.publishers[0].id} */}
+        
+        {item.description}
+        
     </div>
   );
 }

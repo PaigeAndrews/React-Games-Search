@@ -19,10 +19,16 @@ function Shop() {
     };
 
   return (
-    <div className="App">
+    <div className="shop-container">
+      
       {items.map(item => (
-       <Link to={`/shop/${item.id}`}> <h1 key={item.id}>{item.name}</h1> </Link>
+        <div className="shop-item">
+       <Link to={`/shop/${item.id}`}> <h1 key={item.id}>{item.name}</h1>
+       <img alt='' className="game-images" src={item.background_image} />
+        </Link>
+        </div>
         ))}
+        
     </div>
   );
 }
