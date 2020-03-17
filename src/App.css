@@ -24,31 +24,6 @@ nav{
   text-decoration: none;
 }
 
-.game-images{
-  display:flex;
-  /* align-items: center;
-  justify-content: center; */
-  height: auto;
-  width: 25vw;
-  height: 60%;
-}
-
-.shop-container{
-  background: lightseagreen;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100vw;
-}
-
 a:link {
   text-decoration: none;
-}
-
-.shop-item{
-  width: 25vw;
-  border-radius: 7px;
-  padding: 10px;
-  margin: 20px;
-  background: white;
 }
