@@ -48,6 +48,12 @@ function Shop() {
         console.log(items.results);
         setItems(items.results);
         
+        // if (items.name.length > 19){
+        //   let go = items.name.substring(0, 18) + "..."
+        //   return go
+        // }else{
+        //   return items.name
+        // }
     };
 
     // api fetching for shop changing the page
@@ -61,11 +67,16 @@ function Shop() {
     //   if (item.name.length > 15) {
     //     return item.name.substring(0, 14) + "...";
     //   }
-    
+     
 
   return (
+    
     <div className="shop-container">
-      
+      {function itemTitle(){
+      // for (x of items.name) {
+      //   return items.name.substring(0, 14) + "...";
+      //   }
+     }}
       <div>
          <p>You are on page: {page} </p>
          {page > 1 &&
@@ -78,11 +89,25 @@ function Shop() {
          Next page
         </button>
      </div>
+    
 
       {items.map(item => (
-      
+       
         <div className="shop-item">
-       <Link to={`/shop/${item.id}`}> <div className="game-title" key={item.id}>{item.name}</div>
+       <Link to={`/shop/${item.id}`}> 
+       <div className="game-title" key={item.id}>
+         {(() => {
+            if (item.name.length >19) {
+              return (
+                <div>{item.name.substring(0, 18) + "..."}</div>
+              )
+            } else {
+              return (
+              <div>{item.name}</div>
+              )
+              }
+            })()}
+        </div>
        <img alt='' className="game-images" src={item.background_image} />
         </Link>
         </div>
