@@ -25,19 +25,18 @@ function Shop() {
 
      //let pagination = 1;
     const loadMoreCommit = () => {
-    setPage(page + 1);
-    let ok = page + 1;
-    getGames(ok);
+      setPage(page + 1);
+      let ok = page + 1;
+      getGames(ok);
     };
 
    //pagination = pagination - 1;
     const loadBackCommit = () => {
-    if(page > 1){
-      setPage(page - 1);
-    }
-    let ok = page - 1;
-    getGames(ok)
-    
+      if(page > 1){
+        setPage(page - 1);
+      }
+        let ok = page - 1;
+        getGames(ok)
     };
 
     // api fetching for shop load screen
@@ -47,13 +46,6 @@ function Shop() {
         const items = await data.json();
         console.log(items.results);
         setItems(items.results);
-        
-        // if (items.name.length > 19){
-        //   let go = items.name.substring(0, 18) + "..."
-        //   return go
-        // }else{
-        //   return items.name
-        // }
     };
 
     // api fetching for shop changing the page
@@ -63,20 +55,10 @@ function Shop() {
       setItems(dataPage.results);
     }
 
-    // function itemTitle(){
-    //   if (item.name.length > 15) {
-    //     return item.name.substring(0, 14) + "...";
-    //   }
-     
 
   return (
     
     <div className="shop-container">
-      {function itemTitle(){
-      // for (x of items.name) {
-      //   return items.name.substring(0, 14) + "...";
-      //   }
-     }}
       <div>
          <p>You are on page: {page} </p>
          {page > 1 &&

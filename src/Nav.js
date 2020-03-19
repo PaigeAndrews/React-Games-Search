@@ -13,6 +13,9 @@ function Nav() {
             <Link className="nav-style" to='/shop'>
                 <li>Shop</li>
             </Link>
+            <Link className="nav-style" to='/cart'>
+                <li>Cart</li>
+            </Link>
         </ul>
     </nav>
   );

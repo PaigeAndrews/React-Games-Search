@@ -3,6 +3,7 @@ import Nav from './Nav';
 import Shop from './Shop';
 import './App.css';
 import About from './About';
+import Cart from './Cart';
 import ItemDetail from './ItemDetail';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/about" component={About} />
         <Route path="/shop" exact component={Shop} />
+        <Route path="/cart"  component={Cart} />
         <Route path="/shop/:id" component={ItemDetail} />
         </Switch>
       </div>
