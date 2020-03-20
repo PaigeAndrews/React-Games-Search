@@ -17,20 +17,17 @@ function ItemDetail({match}) {
    
 
     const [item, setItem] = useState({});
-    const [d, setD] = useState("");
+    const [description, setDescription] = useState("");
 
 
     const fetchItem = async () => {
     const fetchItem = await fetch(`https://api.rawg.io/api/games/${match.params.id}`)       
     const item = await fetchItem.json();
-    const d = item.description.replace(/<p>/g, 'WOW').replace
+    const description = item.description.replace(/<\/p>/g, ' ').replace(/<p>/g, ' ').replace(/<br \/>/g, ' ')
     // const d = item.description.replace(/<p>/g, "WOW")
     setItem(item)
     console.log(item)
-      // if (Object.keys(item).map(x => x.includes("platforms"))){
-      //   console.log(item.platforms)
-      // }
-    setD(d)
+    setDescription(description)
     }
 
 
@@ -46,19 +43,7 @@ function ItemDetail({match}) {
          {/* // for (x of items.name) { */}
       {/* //   return items.name.substring(0, 14) + "...";
       //   } */}
-        {d}
-        
-        {/* {(() => { */}
-          
-            {/* // item.description.replace(/in/g, '/n')
-          
-              // i.replace(/grand/g, '\n')
-              return ( */}
-                {/* <div>{item.description.replace(/in/g, '/n')}</div> */}
-                {/* )
-          } */}
-          {/* )()} */}
-        
+      <div className="itemPara">{description}</div>
     </div>
   );
 }
