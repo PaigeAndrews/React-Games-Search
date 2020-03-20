@@ -1,6 +1,6 @@
-/* .App{
-  text-align: center;
-} */
+html{
+  width: 100%;
+}
 
 nav{
   display: flex;
@@ -9,6 +9,7 @@ nav{
   min-height: 10vh;
   background: rgb(56, 80, 88);
   color: white;
+  width: 100%;
 }
 
 .nav-links{

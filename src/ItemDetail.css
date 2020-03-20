@@ -5,14 +5,50 @@
 }
 
 .images{
- border-radius: 7px;
+  border-radius: 7px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  margin-bottom: 5%;
+  max-width: 50%;
+  border: 2px solid red;
   }
+
+.videoClip{
+    border-radius: 7px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 420px;
+    height: 315px; */
+    /* width: 50%; */
+    max-width: 100%;
+    height: auto;
+}
 
 .itemPara{
     margin-top: 5%;
     padding: 1% 8% 7% 8%;
 }
+
+.platforms{
+    padding-top: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.platformEach{
+    text-align: center;
+    align-items: center;
+    padding: 1%;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+}
+
+@media only screen and (min-width: 900px) {
+    .videoClip{
+        width: 420px;
+        height: 315px;
+    }
+  }

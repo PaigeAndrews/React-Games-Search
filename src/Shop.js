@@ -59,7 +59,7 @@ function Shop() {
   return (
     
     <div className="shop-container">
-      <div>
+      <div className="pageButtonContainer">
          <p>You are on page: {page} </p>
          {page > 1 &&
           <button onClick={function(){loadBackCommit()}}>
@@ -95,6 +95,18 @@ function Shop() {
         </div>
         ))}
         
+        <div className="pageButtonContainer">
+         <p>You are on page: {page} </p>
+         {page > 1 &&
+          <button onClick={function(){loadBackCommit()}}>
+            Back
+          </button>
+         }
+         
+         <button onClick={function(){loadMoreCommit()}}>
+         Next page
+        </button>
+     </div>
     </div>
   );
 }
