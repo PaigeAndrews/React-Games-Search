@@ -23,6 +23,7 @@ function ItemDetail({match}) {
     const [publisher, setPublisher] = useState("");
     const [genres, setGenres] = useState([]);
 
+
     const fetchItem = async () => {
     const fetchItem = await fetch(`https://api.rawg.io/api/games/${match.params.id}`)       
     const item = await fetchItem.json();
@@ -50,13 +51,9 @@ function ItemDetail({match}) {
         <iframe className="videoClip"
           src={video}>
         </iframe>
-        {/* <h2> Platforms: {item.platforms.map(x => x.platform.name)}</h2> */}
-         {/* {item.ratings[0].count}  */}
+        
          {publisher}
-         {/* // for (x of items.name) { */}
-      {/* //   return items.na
-      me.substring(0, 14) + "...";
-      //   } */}
+         
       <div className="genres">{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
       

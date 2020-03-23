@@ -9,6 +9,7 @@ function Shop() {
 
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(1);
+  const [search, setSearch] = useState('');
 
     useEffect(() => {
     fetchItems();
@@ -23,14 +24,14 @@ function Shop() {
 
     
 
-     //let pagination = 1;
+     //pagination = pagination + 1
     const loadMoreCommit = () => {
       setPage(page + 1);
       let ok = page + 1;
       getGames(ok);
     };
 
-   //pagination = pagination - 1;
+   //pagination = pagination - 1
     const loadBackCommit = () => {
       if(page > 1){
         setPage(page - 1);
@@ -56,9 +57,42 @@ function Shop() {
     }
 
 
+    // api fetching for search box 
+    let getGameSearch = async (search) => {
+      let response2 = await fetch(`${apiBase}?search=${search}`)
+      let dataSearch = await response2.json()
+      setItems(dataSearch.results)
+    }
+    
+    
+    // setting the search hook to what is typed in the search box
+    const updateSearch = e => {
+      setSearch(e.target.value);
+    }
+    
+    // preventing default behavior then calling api
+    const getSearch = e => {
+      e.preventDefault();
+      getGameSearch(search)
+    }
+    
+    
+
+
+
   return (
     
     <div className="shop-container">
+
+      {/* search box field */}
+      <form onSubmit={getSearch} className= "search-form">
+        <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+        <button className="submit-button" type="submit">
+          Search
+        </button>
+      </form>
+
+    {/* changing pages */}
       <div className="pageButtonContainer">
          <p>You are on page: {page} </p>
          {page > 1 &&
@@ -72,12 +106,13 @@ function Shop() {
         </button>
      </div>
     
-
+      {/* mapping items shown on page */}
       {items.map(item => (
        
         <div className="shop-item">
        <Link to={`/shop/${item.id}`}> 
        <div className="game-title" key={item.id}>
+         {/* adding title length restriction */}
          {(() => {
             if (item.name.length >19) {
               return (
@@ -90,11 +125,14 @@ function Shop() {
               }
             })()}
         </div>
+
+        {/* game image */}
        <img alt='' className="game-images" src={item.background_image} />
         </Link>
         </div>
         ))}
         
+        {/* changing pages */}
         <div className="pageButtonContainer">
          <p>You are on page: {page} </p>
          {page > 1 &&
