@@ -22,23 +22,25 @@ function ItemDetail({match}) {
     const [platforms, setPlatforms] = useState([]);
     const [publisher, setPublisher] = useState("");
     const [genres, setGenres] = useState([]);
-
+    const [error, setError] = useState(false);
 
     const fetchItem = async () => {
+      setError(false);
+      try {
     const fetchItem = await fetch(`https://api.rawg.io/api/games/${match.params.id}`)       
     const item = await fetchItem.json();
     const description = item.description.replace(/<\/p>/g, ' ').replace(/<p>/g, ' ').replace(/<br \/>/g, ' ')
-    const video = item.clip.clip
-    const platforms = item.platforms.map(x => x.platform.name + " ")
-    const publisher = item.publishers[0].name
-    const genres = item.genres.map(x => x.name + " ")
     setItem(item)
     console.log(item)
     setDescription(description)
-    setVideo(video)
-    setPlatforms(platforms)
-    setPublisher(publisher)
-    setGenres(genres)
+    setVideo(item.clip.clip)
+    setPlatforms(item.platforms.map(x => x.platform.name + " "))
+    setPublisher(item.publishers[0].name)
+    setGenres(item.genres.map(x => x.name + " "))
+      }
+      catch(error){
+        setError(true);
+      }
     }
 
 
@@ -58,6 +60,9 @@ function ItemDetail({match}) {
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
       
       <div className="itemPara">{description}</div>
+      {
+        error && <div style={{color: `red`}}>some error occurred, while fetching api</div>
+      }
     </div>
   );
 }
