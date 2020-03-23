@@ -122,8 +122,8 @@ function Shop() {
               return (
               <div>{item.name}</div>
               )
-              }
-            })()}
+            }
+          })()}
         </div>
 
         {/* game image */}

@@ -29,7 +29,7 @@ function ItemDetail({match}) {
       try {
     const fetchItem = await fetch(`https://api.rawg.io/api/games/${match.params.id}`)       
     const item = await fetchItem.json();
-    const description = item.description.replace(/<\/p>/g, ' ').replace(/<p>/g, ' ').replace(/<br \/>/g, ' ')
+    const description = item.description.replace(/<[^>]+>/g, '');
     setItem(item)
     console.log(item)
     setDescription(description)
@@ -49,11 +49,14 @@ function ItemDetail({match}) {
     <div className="detail-container">
         <h1>{item.name}</h1>
         <h2>Released: {item.released}</h2>
-        <img alt='' src={item.background_image} className="images" />
+        <img alt='' src={item.background_image} className="images"/>
+       
         <iframe className="videoClip"
           src={video}>
         </iframe>
-        
+        {
+          error && <div className="errorMessage">No Video to display</div>
+        }
          {publisher}
          
       <div className="genres">{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
@@ -61,7 +64,7 @@ function ItemDetail({match}) {
       
       <div className="itemPara">{description}</div>
       {
-        error && <div style={{color: `red`}}>some error occurred, while fetching api</div>
+        error && <div className="errorMessage">No additional data on this title</div>
       }
     </div>
   );
