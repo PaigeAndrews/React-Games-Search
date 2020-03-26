@@ -28,3 +28,20 @@ nav{
 a:link {
   text-decoration: none;
 }
+
+@media (max-width: 480px) {
+  .nav-links{
+    width: 70%;
+  }
+}
+
+@media (min-width: 1000px){
+  .nav-links{
+    font-size: 1.5rem;
+  }
+}
+/* @media not all and (max-width: 480px) {
+  .hide-desktop {
+    display: none;
+  }
+} */

@@ -10,11 +10,11 @@ function Nav() {
             <Link className="nav-style" to='/about'>
                 <li>About</li>
             </Link>
-            <Link className="nav-style" to='/shop'>
-                <li>Shop</li>
+            <Link className="nav-style" to='/games'>
+                <li>Games</li>
             </Link>
-            <Link className="nav-style" to='/cart'>
-                <li>Cart</li>
+            <Link className="nav-style" to='/'>
+                <li>Home</li>
             </Link>
         </ul>
     </nav>

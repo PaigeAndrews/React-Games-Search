@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './ItemDetail.css';
 
 
+
 function ItemDetail({match}) {
 
     useEffect(() => {
@@ -15,7 +16,7 @@ function ItemDetail({match}) {
     // }, []);
    
    
-
+    
     const [item, setItem] = useState({});
     const [video, setVideo] = useState("");
     const [platforms, setPlatforms] = useState([]);
@@ -28,16 +29,17 @@ function ItemDetail({match}) {
     const fetchItem = async () => {
       setError(false);
       try {
-    const fetchItem = await fetch(`https://api.rawg.io/api/games/${match.params.id}`)       
-    const item = await fetchItem.json();
-    // const description = item.description.replace(/<[^>]+>/g, '');
-    setItem(item)
-    console.log(item)
-    setVideo(item.clip.clip)
-    setPlatforms(item.platforms.map(x => x.platform.name + " "))
-    setPublisher(item.publishers[0].name)
-    setGenres(item.genres.map(x => x.name + " "))
-    setRating(item.esrb_rating.name)
+        const fetchItem = await fetch(`https://api.rawg.io/api/games/${match.params.id}`)       
+        const item = await fetchItem.json();
+        // const description = item.description.replace(/<[^>]+>/g, '');
+        setItem(item)
+        console.log(item)
+        setVideo(item.clip.clip)
+        setPlatforms(item.platforms.map(x => x.platform.name + " "))
+        setPublisher(item.publishers[0].name)
+        setGenres(item.genres.map(x => x.name + " "))
+        setRating(item.esrb_rating.name)
+        
       }
       catch(error){
         setError(true);
@@ -45,10 +47,13 @@ function ItemDetail({match}) {
     }
 
 
+
+
   return (
     
     <div className="detail-container">
         <h1>{item.name}</h1>
+
         <h2>Released: {item.released}</h2>
         <img alt='' src={item.background_image} className="images"/>
         <div className="publisher">{publisher}</div>

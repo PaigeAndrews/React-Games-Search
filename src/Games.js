@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import './Shop.css';
+import './Games.css';
 import {Link} from 'react-router-dom';
 
-function Shop() {
+function Games() {
 
   let apiBase = "https://api.rawg.io/api/games"
 
@@ -75,9 +75,7 @@ function Shop() {
       e.preventDefault();
       getGameSearch(search)
     }
-    
-    
-
+   
 
 
   return (
@@ -111,12 +109,27 @@ function Shop() {
        
         <div className="shop-item">
        <Link to={`/shop/${item.id}`}> 
-       <div className="game-title" key={item.id}>
+       <div className="game-title hide-mobile" key={item.id}>
          {/* adding title length restriction */}
          {(() => {
             if (item.name.length >19) {
               return (
                 <div>{item.name.substring(0, 18) + "..."}</div>
+              )
+            } else {
+              return (
+              <div>{item.name}</div>
+              )
+            }
+          })()}
+        </div>
+
+        <div className="game-title hide-desktop" key={item.id}>
+         {/* adding title length restriction */}
+         {(() => {
+            if (item.name.length >12) {
+              return (
+                <div>{item.name.substring(0, 11) + "..."}</div>
               )
             } else {
               return (
@@ -149,4 +162,4 @@ function Shop() {
   );
 }
 
-export default Shop;
+export default Games;
