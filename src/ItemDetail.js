@@ -1,13 +1,17 @@
 import React, {useState, useEffect} from 'react';
 import './ItemDetail.css';
+import Zoom from 'react-reveal/Zoom';
 
 
 
 function ItemDetail({match}) {
 
+  
+
     useEffect(() => {
       fetchItem();
       console.log(match)
+     
     }, []);
    
     // useEffect(() => {
@@ -67,10 +71,11 @@ function ItemDetail({match}) {
         }
         
     
-      <div className="genres">{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
+      <div className="genres" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
-      
-      <div className="itemPara">{item.description_raw}</div>
+     <Zoom ssrFadeout>
+      <div className="itemPara" >{item.description_raw}</div>
+      </Zoom>
       {
         error && <div className="errorMessage">No additional data on this title</div>
       }

@@ -64,6 +64,12 @@ h2{
     .images{
         max-width: 70%;
     }
+    .platforms{
+        padding-top: 3%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
 }
 
 
