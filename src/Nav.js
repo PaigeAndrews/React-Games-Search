@@ -2,10 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './App.css';
 
+
 function Nav() {
   return (
     <nav>
-        <h3>Logo</h3>
+        <img className="logo" src={require("D:/programming/react/routing/src/controllerLogo.png")}  />
         <ul className="nav-links">
             <Link className="nav-style" to='/about'>
                 <li>About</li>

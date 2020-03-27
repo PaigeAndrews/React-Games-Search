@@ -2,6 +2,17 @@ html{
   width: 100%;
 }
 
+body{
+  font-family: 'Audiowide', cursive;
+}
+
+
+
+.logo{
+  height: auto;
+  width: 5%;
+}
+
 nav{
   display: flex;
   justify-content: space-around;
@@ -32,6 +43,9 @@ a:link {
 @media (max-width: 480px) {
   .nav-links{
     width: 70%;
+  }
+  .logo{
+    width: 10%;
   }
 }
 

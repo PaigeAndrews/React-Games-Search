@@ -28,14 +28,16 @@ function ItemDetail({match}) {
     const [genres, setGenres] = useState([]);
     const [rating, setRating] = useState("");
     const [error, setError] = useState(false);
-    
+    const [des, setDes] = useState("");
 
     const fetchItem = async () => {
       setError(false);
       try {
         const fetchItem = await fetch(`https://api.rawg.io/api/games/${match.params.id}`)       
         const item = await fetchItem.json();
-        // const description = item.description.replace(/<[^>]+>/g, '');
+        // const description = item.description_raw.replace(/(.{80})/g, "$1<br>");
+
+
         setItem(item)
         console.log(item)
         setVideo(item.clip.clip)
@@ -43,15 +45,16 @@ function ItemDetail({match}) {
         setPublisher(item.publishers[0].name)
         setGenres(item.genres.map(x => x.name + " "))
         setRating(item.esrb_rating.name)
-        
+        // setDescription(description)
+        setDes(item.description_raw)
+       
       }
       catch(error){
         setError(true);
       }
     }
 
-
-
+  
 
   return (
     
@@ -74,7 +77,19 @@ function ItemDetail({match}) {
       <div className="genres" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
      <Zoom ssrFadeout>
-      <div className="itemPara" >{item.description_raw}</div>
+      <div className="itemPara" >
+        {/* {(() => {
+        let tempArray = []
+        
+        for (var i = 0; i < des.length; i++) {
+            if(des.charAt(i) == "."){
+          
+             tempArray.push(` ${des[i]} HI`)
+           };
+        }
+        return (tempArray.map(e => {return (<div> {e} </div>)}))
+        })()}  */}
+        </div>
       </Zoom>
       {
         error && <div className="errorMessage">No additional data on this title</div>

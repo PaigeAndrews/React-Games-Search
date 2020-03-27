@@ -108,7 +108,7 @@ function Games() {
       {items.map(item => (
        
         <div className="shop-item">
-       <Link to={`/shop/${item.id}`}> 
+       <Link to={`/games/${item.id}`}> 
        <div className="game-title hide-mobile" key={item.id}>
          {/* adding title length restriction */}
          {(() => {
