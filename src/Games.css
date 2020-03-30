@@ -61,6 +61,19 @@ body{
       .desktop-hide {
         display: none;
       }
+      .shop-container{
+        flex-direction: column;
+        align-items: center;
+      }
+      .shop-item{
+        width: 50vw;
+        height: 70%;
+        margin: 10px;
+      }
+      .game-images{
+        width: 50vw;
+        height: 60%;
+      }
   }
   
   @media  (max-width: 600px) {

@@ -10,6 +10,7 @@ function Games() {
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
+  // const [dataPage, setdataPage] = useState([]);
 
     useEffect(() => {
     fetchItems();
@@ -103,30 +104,43 @@ function Games() {
          Next page
         </button>
      </div>
-    
+     {/* && window.innerWidth <= 480 */}
+     {() => {console.log(items, "hoooooooo")}}
       {/* mapping items shown on page */}
       {items.map(item => (
        
         <div className="shop-item">
        <Link to={`/games/${item.id}`}> 
-       <div className="game-title desktop-hide" key={item.id}>
+       <div className="game-title " key={item.id}>
          {/* adding title length restriction */}
-         {(() => {
-            if (item.name.length >19) {
+         {/* {(() => {
+           if(item.name.length >12 && item.name.length <= 19) {
+            return (
+              <div>
+              <div className="mobile-hide">{item.name.substring(0, 11) + "..."}</div>
+              <div className="desktop-hide">{item.name.substring(0, 18) + "..."}</div>
+              </div>
+            )
+          } else if (item.name.length >19) {
               return (
-                <div>{item.name.substring(0, 18) + "..."}</div>
+                <div>
+              <div className="mobile-hide">{item.name.substring(0, 11) + "..."}</div>
+              <div className="desktop-hide">{item.name.substring(0, 18) + "..."}</div>
+              </div>
               )
             } else {
               return (
               <div>{item.name}</div>
               )
             }
-          })()}
+            
+          })()} */}
+          <div>{item.name}</div>
         </div>
 
-        <div className="game-title mobile-hide" key={item.id}>
+        {/* <div className="game-title mobile-hide" key={item.id}> */}
          {/* adding title length restriction */}
-         {(() => {
+         {/* {(() => {
             if (item.name.length >12) {
               return (
                 <div>{item.name.substring(0, 11) + "..."}</div>
@@ -137,7 +151,7 @@ function Games() {
               )
             }
           })()}
-        </div>
+        </div> */}
 
         {/* game image */}
        <img alt='' className="game-images" src={item.background_image} />
