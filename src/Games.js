@@ -109,7 +109,7 @@ function Games() {
        
         <div className="shop-item">
        <Link to={`/games/${item.id}`}> 
-       <div className="game-title hide-mobile" key={item.id}>
+       <div className="game-title desktop-hide" key={item.id}>
          {/* adding title length restriction */}
          {(() => {
             if (item.name.length >19) {
@@ -124,7 +124,7 @@ function Games() {
           })()}
         </div>
 
-        <div className="game-title hide-desktop" key={item.id}>
+        <div className="game-title mobile-hide" key={item.id}>
          {/* adding title length restriction */}
          {(() => {
             if (item.name.length >12) {

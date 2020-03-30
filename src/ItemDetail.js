@@ -28,7 +28,7 @@ function ItemDetail({match}) {
     const [genres, setGenres] = useState([]);
     const [rating, setRating] = useState("");
     const [error, setError] = useState(false);
-    const [des, setDes] = useState("");
+    // const [des, setDes] = useState("");
 
     const fetchItem = async () => {
       setError(false);
@@ -46,7 +46,7 @@ function ItemDetail({match}) {
         setGenres(item.genres.map(x => x.name + " "))
         setRating(item.esrb_rating.name)
         // setDescription(description)
-        setDes(item.description_raw)
+        // setDes(item.description_raw)
        
       }
       catch(error){
@@ -77,7 +77,7 @@ function ItemDetail({match}) {
       <div className="genres" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
      <Zoom ssrFadeout>
-      <div className="itemPara" >
+      <div className="itemPara" >{item.description_raw}
         {/* {(() => {
         let tempArray = []
         
