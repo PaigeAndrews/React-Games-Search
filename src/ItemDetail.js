@@ -59,7 +59,7 @@ function ItemDetail({match}) {
   return (
     
     <div className="detail-container">
-        <h1>{item.name}</h1>
+        <h1 className="title">{item.name}</h1>
 
         <h2>Released: {item.released}</h2>
         <img alt='' src={item.background_image} className="images"/>

@@ -1,0 +1,15 @@
+  
+.containerSlide {
+    width: 100%;
+    margin: 0;
+    padding-top: 12vh;
+}
+
+.containerSlide img {
+    height: 80vh;
+
+}
+
+/* img{
+    width:100%;
+} */

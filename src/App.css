@@ -6,7 +6,9 @@ body{
   font-family: 'Audiowide', cursive;
 }
 
-
+.fuuu{
+  width: 100%;
+}
 
 .logo{
   height: auto;
@@ -17,10 +19,12 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
+  height: 8vh;
   background: rgb(56, 80, 88);
   color: white;
   width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .nav-links{

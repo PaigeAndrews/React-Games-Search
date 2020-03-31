@@ -5,7 +5,8 @@ body{
 }
 
 .search-container{
-  margin: 20px;
+  /* margin: 20px; */
+  margin-top: 11vh;
 }
 
 .search-bar{

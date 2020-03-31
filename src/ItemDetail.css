@@ -4,6 +4,10 @@
    justify-content: center;
 }
 
+.title{
+    margin-top: 11vh;
+} 
+
 .images{
   border-radius: 7px;
   display: block;
