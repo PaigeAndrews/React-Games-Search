@@ -43,11 +43,10 @@ function Games() {
 
     // api fetching for shop load screen
     const fetchItems = async () => {
-        const data = await fetch(`${apiBase}`);
-        
-        const items = await data.json();
-        console.log(items.results);
-        setItems(items.results);
+      const data = await fetch(`${apiBase}`);
+      const items = await data.json();
+      console.log(items.results);
+      setItems(items.results);
     };
 
     // api fetching for shop changing the page
@@ -84,12 +83,14 @@ function Games() {
     <div className="shop-container">
 
       {/* search box field */}
-      <form onSubmit={getSearch} className= "search-form">
-        <input className="search-bar" type="text" value={search} onChange={updateSearch} />
-        <button className="submit-button" type="submit">
-          Search
-        </button>
-      </form>
+      <div className="search-container">
+        <form onSubmit={getSearch} className= "search-form">
+          <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+            <button className="submit-button" type="submit">
+              Search
+            </button>
+        </form>
+      </div>
 
     {/* changing pages */}
       <div className="pageButtonContainer">
