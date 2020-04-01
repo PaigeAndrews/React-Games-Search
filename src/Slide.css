@@ -2,14 +2,16 @@
 .containerSlide {
     width: 100%;
     margin: 0;
-    padding-top: 12vh;
+    padding-top: 9vh;
 }
 
-.containerSlide img {
-    height: 80vh;
-
+img {
+height: auto;
 }
 
-/* img{
-    width:100%;
-} */
+
+@media (min-width: 1400px){
+    img{
+        max-height: 90vh;
+    }
+}

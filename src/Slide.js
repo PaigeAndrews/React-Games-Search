@@ -1,9 +1,7 @@
 import React from 'react'
 import './Slide.css';
 import { Slide } from 'react-slideshow-image'
-import img1 from './img/img1.png'
-import img2 from './img/img2.png'
-import img3 from './img/img3.png'
+import {Link} from 'react-router-dom';
 
 import './Slide.css'
 const images = [
@@ -26,14 +24,19 @@ const proprietes = {
 const Slideshow = () => {
     return (
         <div className="containerSlide">
+             
             <Slide {...proprietes}
             images={images}
             >
-                 <div className="each-slide">
+                
+                 {/* <div className="each-slide">
                     <div>
+                    <Link to={`/games/259801`}>
                         <img src={images[0]} alt="img1" />
+                        </Link>
                     </div>
                 </div>
+                
                 <div className="each-slide">
                     <div>
                         <img src={images[1]} alt="img2" />
@@ -58,8 +61,9 @@ const Slideshow = () => {
                     <div>
                         <img src={images[6]} alt="img6" />
                     </div>
-                </div>
+                </div> */}
             </Slide>
+            
         </div>
     )
 }

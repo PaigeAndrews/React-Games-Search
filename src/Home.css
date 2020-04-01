@@ -1,0 +1,21 @@
+.home-container{
+    text-align: center;
+    
+}
+
+.text{
+    padding: 5%;
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.game-block{
+    width: 25vw;
+    height: auto;
+    margin: 7px;
+    border-radius: 7px;
+}
