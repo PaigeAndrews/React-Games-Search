@@ -71,6 +71,7 @@ function ItemDetail({match}) {
         </iframe>
         {
           error && <div className="errorMessage">No Content to display</div>
+          // error && <img alt='' src={item.background_image_additional} className="images" />
         }
         
     
@@ -91,9 +92,9 @@ function ItemDetail({match}) {
         })()}  */}
         </div>
       </Zoom>
-      {
+      {/* {
         error && <div className="errorMessage">No additional data on this title</div>
-      }
+      } */}
     </div>
   );
 }

@@ -4,13 +4,16 @@
 }
 
 .text{
-    padding: 5%;
+    padding: 0 5% 5% 5%;
 }
-
+h2{
+    margin: 0;
+    padding: 2%;
+}
 .flex-container{
     display: flex;
     flex-wrap: wrap;
-    
+    justify-content: center;
 }
 
 .game-block{
