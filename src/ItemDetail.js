@@ -11,7 +11,7 @@ function ItemDetail({match}) {
     useEffect(() => {
       fetchItem();
       console.log(match)
-     
+      document.body.scrollTop = 0;
     }, []);
    
     // useEffect(() => {

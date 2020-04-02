@@ -1,10 +1,15 @@
 import React from 'react';
-// import './App.css';
 import './Home.css';
+import Random from './random.png';
 import Slideshow from './Slide';
 import {Link} from 'react-router-dom';
 
 function Home() {
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
     return (
       <div className="home-container">
         
@@ -34,15 +39,16 @@ function Home() {
             <Link to={`/games/52939`}>
               <img className="game-block l" src="https://cdn.mos.cms.futurecdn.net/XxracgYTs8VSKq3SeMyHJ.jpg"></img>
             </Link>
-            <Link to={`/games/292838`}>
-              <img className="game-block e" src="https://www.lifewire.com/thmb/lOcp49hO-GvkFM7JgrwZjRpZC_8=/1920x1080/filters:fill(auto,1)/how-to-play-tetris-99-on-nintendo-switch-featured-7af5d3957deb44f4a8d4c812d88946ce.jpg"></img>
+            <Link to={`/games/54531`}>
+              <img className="game-block e" src="https://img1.svg.com/img/gallery/the-untold-truth-of-super-smash-bros/intro-1535657924.jpg"></img>
             </Link>
             <Link to={`/games/57607`}>
               <img className="game-block l" src="https://gameverse.com/wp-content/uploads/2018/10/Metal-Gear-Solid.jpg"></img>
             </Link>
           </div>
-          
+          <h2>Or maybe a random game?</h2>
         </div>
+        <Link to={`/games/${getRandomInt(355000)}`}><img className="random-block" src={Random} /></Link>
       </div>
     );
   }
