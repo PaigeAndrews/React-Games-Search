@@ -27,7 +27,8 @@ body{
    width: 323px;
    height: 200px;
   border-radius: 7px 7px 0 0;
-  padding: 10px;
+  border-radius: 7px;
+  /* padding: 10px; */
   margin: 20px;
   margin-right: 2%;
   background: white;
@@ -42,7 +43,8 @@ body{
     /* object-fit: cover; */
     width: 323px;
     height: 184px;
-    border-radius: 7px 7px 0 0;
+    height: auto;
+    /* border-radius: 7px 7px 0 0; */
   }
   
   .shop-container{
@@ -50,6 +52,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100vw;
+    /* padding-right: 5.3%; */
   }
   
   .game-title{
@@ -71,16 +74,17 @@ body{
       .shop-item{
          width: 223px;
          height: 100px;
-        padding: 10px;
+        /* padding: 10px; */
         margin: 20px;
-        margin-right: 2%;
+        /* margin-right: 2%; */
         overflow: hidden;
       } 
       
       .game-images{
           width: 223px;
           height: 110px;
-          border-radius: 7px 7px 0 0;
+          /* border-radius: 7px 7px 0 0; */
+          
         }
     }
 

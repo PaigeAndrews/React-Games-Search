@@ -22,3 +22,22 @@ h2{
     margin: 7px;
     border-radius: 7px;
 }
+
+.l{
+    padding-top: 5%;
+}
+.e{
+    width: 30vw;
+}
+
+@media (max-width:420px){
+    .flex-container{
+        flex-direction: column;
+    }
+    .game-block{
+        width: 80vw;
+    }
+    .l{
+        padding: 0;
+    }
+}

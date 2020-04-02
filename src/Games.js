@@ -114,29 +114,21 @@ function Games() {
        <Link to={`/games/${item.id}`}> 
        <div className="game-title " key={item.id}>
          {/* adding title length restriction */}
-         {/* {(() => {
-           if(item.name.length >12 && item.name.length <= 19) {
+         {(() => {
+           if(item.name.length >20){
             return (
               <div>
-              <div className="mobile-hide">{item.name.substring(0, 11) + "..."}</div>
-              <div className="desktop-hide">{item.name.substring(0, 18) + "..."}</div>
+              <div className="mobile-hide">{item.name.substring(0, 19) + "..."}</div>
+              <div className="desktop-hide">{item.name}</div>
               </div>
             )
-          } else if (item.name.length >19) {
-              return (
-                <div>
-              <div className="mobile-hide">{item.name.substring(0, 11) + "..."}</div>
-              <div className="desktop-hide">{item.name.substring(0, 18) + "..."}</div>
-              </div>
-              )
-            } else {
-              return (
+          } else{
+            return(
               <div>{item.name}</div>
-              )
-            }
-            
-          })()} */}
-          <div>{item.name}</div>
+            )
+          } 
+          })()}
+          {/* <div>{item.name}</div> */}
         </div>
 
         {/* <div className="game-title mobile-hide" key={item.id}> */}
