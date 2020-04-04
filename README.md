@@ -15,5 +15,3 @@ Urls to my Game Search Website, my Linkedin, and GitHub
 
 
 ![Game Screen shot](https://raw.githubusercontent.com/PaigeAndrews/React-Games-Search/master/src/screenShot/gameScreenShot.png "game")
-![Alt text](/../React-Games-Search/src/screenShot/gameScreenShot.png "Optional Title")
-
