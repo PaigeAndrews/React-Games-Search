@@ -5,7 +5,7 @@ import About from './About';
 import Home from './Home';
 import Games from './Games';
 import ItemDetail from './ItemDetail';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 
 
 function App() {
