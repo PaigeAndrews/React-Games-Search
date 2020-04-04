@@ -18,7 +18,8 @@ const proprietes = {
     transitionDuration: 500,
     infinite: true,
     indicators: true,
-    arrows: true
+    arrows: true,
+    // pauseOnHover: true
 }
 
 const Slideshow = () => {
@@ -26,42 +27,55 @@ const Slideshow = () => {
         <div className="containerSlide">
              
             <Slide {...proprietes}
-            images={images}
             >
                 
-                 {/* <div className="each-slide">
+                 <div className="each-slide">
                     <div>
-                    <Link to={`/games/259801`}>
-                        <img src={images[0]} alt="img1" />
+                        <Link to={`/games/259801`}>
+                            <img src={images[0]} alt="img1" />
                         </Link>
                     </div>
                 </div>
                 
                 <div className="each-slide">
                     <div>
-                        <img src={images[1]} alt="img2" />
+                        <Link to={`/games/5679`}>
+                            <img src={images[1]} alt="img2" />
+                        </Link>
                     </div>
                 </div>
+
                 <div className="each-slide">
                     <div>
-                        <img src={images[3]} alt="img3" />
+                        <Link to={`/games/10419`}>
+                            <img src={images[2]} alt="img3" />
+                        </Link>
                     </div>
-                 </div>   
-                    <div className="each-slide">
+                 </div>  
+
+                <div className="each-slide">
                     <div>
-                        <img src={images[4]} alt="img4" />
+                        <Link to={`/games/27036`}>
+                            <img src={images[3]} alt="img4" />
+                        </Link>
                     </div>
                 </div> 
+
                 <div className="each-slide">
                     <div>
-                        <img src={images[5]} alt="img5" />
+                        <Link to={`/games/368967`}>
+                            <img src={images[4]} alt="img5" />
+                        </Link>
                     </div>
                 </div>
+
                 <div className="each-slide">
                     <div>
-                        <img src={images[6]} alt="img6" />
+                        <Link to={`/games/49`}>
+                            <img src={images[5]} alt="img6" />
+                        </Link>
                     </div>
-                </div> */}
+                </div>
             </Slide>
             
         </div>
