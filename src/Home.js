@@ -3,6 +3,12 @@ import './Home.css';
 import Random from './random.png';
 import Slideshow from './Slide';
 import {Link} from 'react-router-dom';
+// import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+// import '../node_modules/mdbreact/docs/css/mdb.min.css';
+// import '@fortawesome/fontawesome-free/css/all.min.css';
+// import 'bootstrap-css-only/css/bootstrap.min.css';
+// import 'mdbreact/dist/css/mdb.css';
 
 function Home() {
 
@@ -23,7 +29,9 @@ function Home() {
          
           <div className="flex-container">
             <Link to={`/games/58813`}>
+            {/* <MDBMask hover zoom> */}
               <img className="game-block l" src="https://images.pushsquare.com/43bdc5f283859/resident-evil-2-remake-ps4.original.jpg"></img>
+              {/* </MDBMask> */}
             </Link>
             <Link to={`/games/28`}>
               <img className="game-block e" src="https://i.ytimg.com/vi/h6k532Y7jK8/maxresdefault.jpg"></img>
