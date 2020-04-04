@@ -14,4 +14,6 @@ Urls to my Game Search Website, my Linkedin, and GitHub
 | Linkedin | https://www.linkedin.com/in/paige-andrews-4a7768186/ |
 
 
-![Game Screen shot](https://raw.github.com/PaigeAndrews/React-Games-Search/master/screenShot/gameScreenShot.png "game")
+![Game Screen shot](https://raw.githubusercontent.com/PaigeAndrews/React-Games-Search/master/src/screenShot/gameScreenShot.png "game")
+![Alt text](/../React-Games-Search/src/screenShot/gameScreenShot.png "Optional Title")
+
