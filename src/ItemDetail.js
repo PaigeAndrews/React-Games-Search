@@ -78,19 +78,8 @@ function ItemDetail({match}) {
       <div className="genres" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
      <Zoom ssrFadeout>
-      <div className="itemPara" >{item.description_raw}
-        {/* {(() => {
-        let tempArray = []
-        
-        for (var i = 0; i < des.length; i++) {
-            if(des.charAt(i) == "."){
-          
-             tempArray.push(` ${des[i]} HI`)
-           };
-        }
-        return (tempArray.map(e => {return (<div> {e} </div>)}))
-        })()}  */}
-        </div>
+      <div className="itemPara" dangerouslySetInnerHTML={{__html: item.description}} />
+      
       </Zoom>
       {/* {
         error && <div className="errorMessage">No additional data on this title</div>
