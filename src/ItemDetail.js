@@ -22,7 +22,7 @@ function ItemDetail({match}) {
    
     
     const [item, setItem] = useState({});
-    const [video, setVideo] = useState("");
+    // const [video, setVideo] = useState("");
     const [platforms, setPlatforms] = useState([]);
     const [publisher, setPublisher] = useState("");
     const [genres, setGenres] = useState([]);
@@ -41,7 +41,7 @@ function ItemDetail({match}) {
 
         setItem(item)
         console.log(item)
-        setVideo(item.clip.clip)
+        // setVideo(item.clip.clip)
         setYouTube(item.clip.video)
         setPlatforms(item.platforms.map(x => x.platform.name + " "))
         setPublisher(item.publishers[0].name)
@@ -61,25 +61,29 @@ function ItemDetail({match}) {
   return (
     
     <div className="detail-container">
-        <h1 className="title">{item.name}</h1>
-
-        <h2>Released: {item.released}</h2>
-        <img alt='' src={item.background_image} className="images"/>
-        <div className="publisher">{publisher}</div>
-        {rating}
-         
-        {/* <iframe className="videoClip"
+      <img alt='' src={item.background_image} className="images"/>
+       <div className="right-container">
+          <h1 className="title">{item.name}</h1>
+          <div className="publisher">{publisher}</div>
+          <h2>Released: {item.released}</h2>
+          <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`}></iframe>
+        </div>
+        
+        
+        <div className="rating">{rating}</div>
+{/*          
+        <iframe className="videoClip"
           src={video}>
         </iframe> */}
-        {
+        {/* {
           error && <div className="errorMessage">No Content to display</div>
           // error && <img alt='' src={item.background_image_additional} className="images" />
-        }
-        <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`}></iframe>
+        } */}
         
-        <div classNme="gameLink"><a href={item.website}>Visit {item.name}'s website</a></div>
+        
+        <div><a classNme="gameLink" href={item.website}>Visit {item.name}'s website</a></div>
     
-      <div className="genres" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
+      <div className="platforms" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
      <Zoom ssrFadeout>
       <div className="itemPara" dangerouslySetInnerHTML={{__html: item.description}} />

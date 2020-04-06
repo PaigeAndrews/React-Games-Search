@@ -1,21 +1,33 @@
 .detail-container{
-    text-align: center; 
+    /* text-align: center; 
     align-items: center;
-   justify-content: center;
+   justify-content: center; */
+}
+
+.right-container{
+    float: right;
+    width: 48vw;
+    text-align: center;
 }
 
 .title{
     margin-top: 11vh;
+    display: inline-block;
+    vertical-align: top;
+    
 } 
 
 .images{
-  border-radius: 7px;
-  display: block;
+  /* border-radius: 7px; */
+  /* display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
-  max-width: 50%;
-  border: 2px solid red;
+  max-width: 50%; */
+  margin-top: 8vh;
+  border: 2px solid #7c7186;
+  width: 50vw; 
+  height: auto;
   }
 
 .videoClip{
@@ -39,20 +51,27 @@
     padding: 1% 8% 7% 8%;
     /* background: rgb(42, 207, 199); */
     /* border-radius: 7px; */
+    
 }
 
 p{
-    background: rgb(42, 207, 199); 
+    /* background: rgb(42, 207, 199); 
     background: rgb(17, 100, 96);
     background: rgb(56, 80, 88);
-    color: white;
-     border-radius: 7px;
+    color: white; */
+    /* border: 2px solid red; */
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+     /* border-radius: 7px; */
      padding: 5%;
+     background: rgb(34, 187, 179);
+     /* background: #7c7186 ; */
 }
 
 .gameLink{
     text-decoration: none;
     color:black;
+    padding: 10%;
 }
 
 a:link {
@@ -61,7 +80,12 @@ a:link {
 
 .publisher{
     color: white;
+    text-shadow: 1px 1px red;
     display: block;
+}
+
+.rating{
+    padding: 2%;
 }
 
 .platforms{
@@ -79,9 +103,23 @@ a:link {
     border-bottom: 1px solid red;
 }
 
+.genreEach{
+    text-align: center;
+    align-items: center;
+    padding: 1%;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    background: rgb(255, 70, 70);
+}
+
 .errorMessage{
     color: red;
 
+}
+
+h1{
+    display: inline;
+    
 }
 
 h2{
