@@ -37,7 +37,27 @@
 .itemPara{
     margin-top: 5%;
     padding: 1% 8% 7% 8%;
+    /* background: rgb(42, 207, 199); */
+    /* border-radius: 7px; */
 }
+
+p{
+    background: rgb(42, 207, 199); 
+    background: rgb(17, 100, 96);
+    background: rgb(56, 80, 88);
+    color: white;
+     border-radius: 7px;
+     padding: 5%;
+}
+
+.gameLink{
+    text-decoration: none;
+    color:black;
+}
+
+a:link {
+    text-decoration: none;
+  }
 
 .publisher{
     color: white;

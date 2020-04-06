@@ -10,13 +10,37 @@ body{
 }
 
 .search-bar{
-  padding: 5px;
-  border-radius: 7px 0 0 7px;
+  text-align: center;
+  padding: 5px 5% 0 0;
+  border-radius: 7px;
+  
+}
+
+.search-form{
+  display: block;
+  text-align: center;
+  width: 100vw;
+  
 }
 
 .submit-button{
-  padding: 5px;
-  border-radius: 0 7px 7px 0;
+   padding: 3px; 
+  /* border-radius: 0 7px 7px 0;  */
+}
+
+.pageNumber{
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+
+button{
+  border-radius: 7px;
+  color: white;
+  background: rgb(18, 112, 107)
+}
+
+.buttonPage{
+  padding: 6px;
 }
 
 .shop-item{

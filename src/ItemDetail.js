@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './ItemDetail.css';
 import Zoom from 'react-reveal/Zoom';
-
+import {Link }from 'react-router-dom';
 
 
 function ItemDetail({match}) {
@@ -28,6 +28,7 @@ function ItemDetail({match}) {
     const [genres, setGenres] = useState([]);
     const [rating, setRating] = useState("");
     const [error, setError] = useState(false);
+    const [youTube, setYouTube] = useState("");
     // const [des, setDes] = useState("");
 
     const fetchItem = async () => {
@@ -41,6 +42,7 @@ function ItemDetail({match}) {
         setItem(item)
         console.log(item)
         setVideo(item.clip.clip)
+        setYouTube(item.clip.video)
         setPlatforms(item.platforms.map(x => x.platform.name + " "))
         setPublisher(item.publishers[0].name)
         setGenres(item.genres.map(x => x.name + " "))
@@ -66,14 +68,16 @@ function ItemDetail({match}) {
         <div className="publisher">{publisher}</div>
         {rating}
          
-        <iframe className="videoClip"
+        {/* <iframe className="videoClip"
           src={video}>
-        </iframe>
+        </iframe> */}
         {
           error && <div className="errorMessage">No Content to display</div>
           // error && <img alt='' src={item.background_image_additional} className="images" />
         }
+        <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`}></iframe>
         
+        <div classNme="gameLink"><a href={item.website}>Visit {item.name}'s website</a></div>
     
       <div className="genres" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>

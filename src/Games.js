@@ -85,7 +85,7 @@ function Games() {
       {/* search box field */}
       <div className="search-container">
         <form onSubmit={getSearch} className= "search-form">
-          <input className="search-bar" type="text" value={search} onChange={updateSearch} />
+          <input className="search-bar" type="text" placeholder="Search here..." value={search} onChange={updateSearch} />
             <button className="submit-button" type="submit">
               Search
             </button>
@@ -94,14 +94,14 @@ function Games() {
 
     {/* changing pages */}
       <div className="pageButtonContainer">
-         <p>You are on page: {page} </p>
+         <div className="pageNumber">You are on page: {page} </div>
          {page > 1 &&
-          <button onClick={function(){loadBackCommit()}}>
+          <button className="buttonPage" onClick={function(){loadBackCommit()}}>
             Back
           </button>
          }
          
-         <button onClick={function(){loadMoreCommit()}}>
+         <button className="buttonPage" onClick={function(){loadMoreCommit()}}>
          Next page
         </button>
      </div>
@@ -154,14 +154,14 @@ function Games() {
         
         {/* changing pages */}
         <div className="pageButtonContainer">
-         <p>You are on page: {page} </p>
+         <div className="pageNumber">You are on page: {page} </div>
          {page > 1 &&
-          <button onClick={function(){loadBackCommit()}}>
+          <button className="buttonPage" onClick={function(){loadBackCommit()}}>
             Back
           </button>
          }
          
-         <button onClick={function(){loadMoreCommit()}}>
+         <button className="buttonPage" onClick={function(){loadMoreCommit()}}>
          Next page
         </button>
      </div>
