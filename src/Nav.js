@@ -6,7 +6,9 @@ import './App.css';
 function Nav() {
   return (
     <nav>
-        <img className="logo" src={require("D:/programming/react/routing/src/controllerLogo.png")}  />
+        <Link className="logo" to='/'>
+            <img  src={require("D:/programming/react/routing/src/controllerLogo.png")}  />
+        </Link>
         <ul className="nav-links">
             <Link className="nav-style" to='/about'>
                 <li>About</li>
