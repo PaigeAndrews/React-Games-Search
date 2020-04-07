@@ -4,7 +4,11 @@ html{
 
 body{
   font-family: 'Audiowide', cursive;
+  /* background-image: url(""); */
+  width: 100%;
+  height: auto;
 }
+
 
 .fuuu{
   width: 100%;
@@ -21,6 +25,7 @@ nav{
   align-items: center;
   height: 8vh;
   background: rgb(56, 80, 88);
+  background: rgb(82, 117, 115);
   /* background: rgb(17, 100, 96); */
   color: white;
   width: 100%;

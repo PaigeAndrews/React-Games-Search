@@ -1,3 +1,7 @@
+body{
+    /* overflow: hidden; */
+}
+
 .detail-container{
     /* text-align: center; 
     align-items: center;
@@ -8,6 +12,8 @@
     float: right;
     width: 48vw;
     text-align: center;
+    margin-top: 8vh;
+    height: auto;
 }
 
 .title{
@@ -18,28 +24,33 @@
 } 
 
 .images{
-  /* border-radius: 7px; */
+  border-radius: 7px;
   /* display: block;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
   max-width: 50%; */
   margin-top: 8vh;
-  border: 2px solid #7c7186;
+  /* border: 2px solid #7c7186; */
+  border-color: rgb(182, 13, 13);
+  border-width: thick;
+  border-style: none ridge ridge none;
   width: 50vw; 
   height: auto;
   }
 
 .videoClip{
+    margin-top: 3vh;
     border-radius: 7px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    /* width: 420px;
-    height: 315px; */
+    width: 40vw; 
+    height: 250px; 
     /* width: 50%; */
-    max-width: 100%;
-    height: auto;
+    /* max-width: 100%; */
+    /* width: 100vw;
+    height: auto; */
 }
 
 .video-error{
@@ -51,7 +62,7 @@
     padding: 1% 8% 7% 8%;
     /* background: rgb(42, 207, 199); */
     /* border-radius: 7px; */
-    
+   
 }
 
 p{
@@ -60,13 +71,22 @@ p{
     background: rgb(56, 80, 88);
     color: white; */
     /* border: 2px solid red; */
-    border-top: 2px solid red;
-    border-bottom: 2px solid red;
+    border-top: 2px solid rgba(29, 37, 37, 0.3);
+    border-bottom: 2px solid rgba(29, 37, 37, 0.3);
      /* border-radius: 7px; */
      padding: 5%;
-     background: rgb(34, 187, 179);
+     background: rgba(29, 37, 37, 0.3);
+     background: #757179;
      /* background: #7c7186 ; */
 }
+
+.scrollSection{
+    overflow-y: scroll;              
+    width: 48vw;
+    height: 35vh; 
+    margin-top: 1%;
+}
+
 
 .gameLink{
     text-decoration: none;
@@ -79,8 +99,8 @@ a:link {
   }
 
 .publisher{
-    color: white;
-    text-shadow: 1px 1px red;
+    
+    /* text-shadow: 1px 1px rgb(0, 0, 0); */
     display: block;
 }
 
@@ -109,8 +129,9 @@ a:link {
     padding: 1%;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
-    background: rgb(255, 70, 70);
+    /* background: rgb(255, 70, 70); */
 }
+
 
 .errorMessage{
     color: red;
@@ -140,8 +161,8 @@ h2{
 
 
 @media only screen and (min-width: 900px) {
-    .videoClip{
+    /* .videoClip{
         width: 420px;
         height: 315px;
-    }
+    } */
   }

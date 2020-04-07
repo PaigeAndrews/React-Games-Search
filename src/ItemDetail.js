@@ -63,12 +63,17 @@ function ItemDetail({match}) {
     <div className="detail-container">
       <img alt='' src={item.background_image} className="images"/>
        <div className="right-container">
-          <h1 className="title">{item.name}</h1>
+          <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`}></iframe>
+          <section className="scrollSection">
+          <Zoom ssrFadeout>
+            <div className="itemPara" dangerouslySetInnerHTML={{__html: item.description}} />
+      
+          </Zoom>
+            </section>
+        </div>
+        <h1 className="title">{item.name}</h1>
           <div className="publisher">{publisher}</div>
           <h2>Released: {item.released}</h2>
-          <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`}></iframe>
-        </div>
-        
         
         <div className="rating">{rating}</div>
 {/*          
@@ -85,10 +90,7 @@ function ItemDetail({match}) {
     
       <div className="platforms" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
-     <Zoom ssrFadeout>
-      <div className="itemPara" dangerouslySetInnerHTML={{__html: item.description}} />
       
-      </Zoom>
       {/* {
         error && <div className="errorMessage">No additional data on this title</div>
       } */}

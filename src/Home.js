@@ -57,6 +57,7 @@ function Home() {
           <h2>Or maybe a random game?</h2>
         </div>
         <Link to={`/games/${getRandomInt(255000)}`}><img className="random-block" src={Random} /></Link>
+        
       </div>
     );
   }
