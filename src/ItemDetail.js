@@ -71,6 +71,7 @@ function ItemDetail({match}) {
           </Zoom>
             </section>
         </div>
+        <div className="left-container">
         <h1 className="title">{item.name}</h1>
           <div className="publisher">{publisher}</div>
           <h2>Released: {item.released}</h2>
@@ -90,7 +91,7 @@ function ItemDetail({match}) {
     
       <div className="platforms" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
-      
+      </div>
       {/* {
         error && <div className="errorMessage">No additional data on this title</div>
       } */}

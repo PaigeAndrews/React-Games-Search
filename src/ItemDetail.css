@@ -10,21 +10,30 @@ body{
 
 .right-container{
     float: right;
-    width: 48vw;
+    width: 45vw;
     text-align: center;
     margin-top: 8vh;
+    height: auto;
+    
+}
+
+.left-container{
+    float: left;
+    width: 50vw;
+    text-align: center;
+    /* margin-top: 2%; */
     height: auto;
 }
 
 .title{
-    margin-top: 11vh;
+    /* margin-top: 11vh; */
     display: inline-block;
     vertical-align: top;
     
 } 
 
 .images{
-  border-radius: 7px;
+  /* border-radius: 7px; */
   /* display: block;
   margin-left: auto;
   margin-right: auto;
@@ -59,7 +68,7 @@ body{
 
 .itemPara{
     margin-top: 5%;
-    padding: 1% 8% 7% 8%;
+    padding: 1% 8% 7% 0;
     /* background: rgb(42, 207, 199); */
     /* border-radius: 7px; */
    
@@ -75,16 +84,17 @@ p{
     border-bottom: 2px solid rgba(29, 37, 37, 0.3);
      /* border-radius: 7px; */
      padding: 5%;
-     background: rgba(29, 37, 37, 0.3);
-     background: #757179;
+     background: rgb(82, 117, 115);
+     
      /* background: #7c7186 ; */
 }
 
 .scrollSection{
     overflow-y: scroll;              
-    width: 48vw;
+    width: 43vw;
     height: 35vh; 
-    margin-top: 1%;
+    margin-top: 3%;
+    margin-right: 1.5vw;
 }
 
 
