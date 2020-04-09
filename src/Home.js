@@ -29,9 +29,7 @@ function Home() {
          
           <div className="flex-container">
             <Link to={`/games/58813`}>
-            {/* <MDBMask hover zoom> */}
               <img className="game-block l" src="https://images.pushsquare.com/43bdc5f283859/resident-evil-2-remake-ps4.original.jpg"></img>
-              {/* </MDBMask> */}
             </Link>
             <Link to={`/games/28`}>
               <img className="game-block e" src="https://i.ytimg.com/vi/h6k532Y7jK8/maxresdefault.jpg"></img>
@@ -40,8 +38,8 @@ function Home() {
               <img className="game-block l" src="https://assets.gamepur.com/wp-content/uploads/2020/03/27113225/Animal-Crossing-New-Horizons.jpg"></img>
             </Link>
           </div>
+
           <h2>Even the older games</h2>
-            
           
           <div className="flex-container">
             <Link to={`/games/52939`}>
@@ -54,7 +52,9 @@ function Home() {
               <img className="game-block l" src="https://gameverse.com/wp-content/uploads/2018/10/Metal-Gear-Solid.jpg"></img>
             </Link>
           </div>
+
           <h2>Or maybe a random game?</h2>
+          
         </div>
         <Link to={`/games/${getRandomInt(255000)}`}><img className="random-block" src={Random} /></Link>
         

@@ -20,6 +20,7 @@ function App() {
         <Route path="/games" exact component={Games} />
       
         <Route path="/games/:id" component={ItemDetail} />
+        
         </Switch>
       </div>
     

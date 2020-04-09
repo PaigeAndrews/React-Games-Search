@@ -105,8 +105,7 @@ function Games() {
          Next page
         </button>
      </div>
-     {/* && window.innerWidth <= 480 */}
-     {() => {console.log(items, "hoooooooo")}}
+     
       {/* mapping items shown on page */}
       {items.map(item => (
        
@@ -128,43 +127,26 @@ function Games() {
             )
           } 
           })()}
-          {/* <div>{item.name}</div> */}
         </div>
 
-        {/* <div className="game-title mobile-hide" key={item.id}> */}
-         {/* adding title length restriction */}
-         {/* {(() => {
-            if (item.name.length >12) {
-              return (
-                <div>{item.name.substring(0, 11) + "..."}</div>
-              )
-            } else {
-              return (
-              <div>{item.name}</div>
-              )
-            }
-          })()}
-        </div> */}
-
         {/* game image */}
-       <img alt='' className="game-images" src={item.background_image} />
+        <img alt='' className="game-images" src={item.background_image} />
         </Link>
         </div>
         ))}
         
         {/* changing pages */}
         <div className="pageButtonContainer">
-         <div className="pageNumber">You are on page: {page} </div>
-         {page > 1 &&
-          <button className="buttonPage" onClick={function(){loadBackCommit()}}>
-            Back
-          </button>
-         }
-         
-         <button className="buttonPage" onClick={function(){loadMoreCommit()}}>
-         Next page
-        </button>
-     </div>
+          <div className="pageNumber">You are on page: {page} </div>
+           {page > 1 &&
+           <button className="buttonPage" onClick={function(){loadBackCommit()}}>
+             Back
+            </button>
+            }
+           <button className="buttonPage" onClick={function(){loadMoreCommit()}}>
+            Next page
+           </button>
+        </div>
     </div>
   );
 }
