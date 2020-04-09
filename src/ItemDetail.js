@@ -63,7 +63,7 @@ function ItemDetail({match}) {
     <div className="detail-container">
       <img alt='' src={item.background_image} className="images"/>
        <div className="right-container">
-          <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`}></iframe>
+          <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`} frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>
           <section className="scrollSection">
           <Zoom ssrFadeout>
             <div className="itemPara" dangerouslySetInnerHTML={{__html: item.description}} />
@@ -87,15 +87,16 @@ function ItemDetail({match}) {
         } */}
         
         
-        <div><a classNme="gameLink" href={item.website}>Visit {item.name}'s website</a></div>
-    
+        <div><a className="gameLink" href={item.website}>Visit {item.name}'s website</a></div>
+        </div>
+    <div className="right-bottom-container">
       <div className="platforms" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
       <div className="platforms">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
       </div>
       {/* {
         error && <div className="errorMessage">No additional data on this title</div>
       } */}
-    </div>
+  </div>
   );
 }
 
