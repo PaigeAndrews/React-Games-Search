@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './ItemDetail.css';
 import Zoom from 'react-reveal/Zoom';
-
+import Logo from './logo.png';
+import {Link} from 'react-router-dom';
 
 function ItemDetail({match}) {
 
@@ -52,7 +53,12 @@ function ItemDetail({match}) {
             return (
               
               <div className="error-container"> 
-              <div className="error-message">No game data to display for this title</div>
+              {/* <div img src="D:\programming\react\routing\src\logo.png"> </div> */}
+                <h1>Oops!</h1>
+                {/* 241983 */}
+                <h2>I ate the page you're looking for</h2>
+                <Link to='/'><button> Back to home </button></Link>
+                
               </div>
               
             )
