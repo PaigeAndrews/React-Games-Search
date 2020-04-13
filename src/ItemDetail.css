@@ -6,7 +6,13 @@ body{
     /* text-align: center; 
     align-items: center;
    justify-content: center; */
+   height: 100vh;
 }
+
+/* .image-container{
+    display: inline;
+} */
+
 
 .right-container{
     float: right;
@@ -22,7 +28,8 @@ body{
     width: 50vw;
     text-align: center;
     /* margin-top: 2%; */
-    height: auto;
+    /* height: 60vh; */
+    margin-bottom: 5vh;
 }
 
 .right-bottom-container{
@@ -40,6 +47,12 @@ body{
     vertical-align: top;
     
 } 
+
+.test{
+    display: hidden;
+    height: 0px;
+    width: 0px;
+}
 
 .images{
   /* border-radius: 7px; */
@@ -65,15 +78,8 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 40vw; 
-    /* height: 250px;
-    width: auto; */
+    width: 40vw;
     height: 300px;
-    /* height: auto;  */
-    /* width: 50%; */
-    /* max-width: 100%; */
-    /* width: 100vw;
-    height: auto; */
 }
 
 .video-error{
@@ -146,6 +152,7 @@ a:link {
     text-align: center;
     align-items: center;
     padding: 1%;
+    /* margin-bottom: 5%; */
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     width: 100px;
@@ -157,11 +164,11 @@ a:link {
     text-align: center;
     align-items: center;
     font-size: 1rem;
-    margin-top: 18vh;
+    padding-top: 18vh;
     width: 100%;
-    height: 100%;
+    height: 70vh;
     border: none;
-background: none;
+    background: none;
 }
 
 .errorButton{
@@ -188,6 +195,60 @@ h1{
 h2{
     font-size: 1.5em;
 }
+
+
+@media (max-width: 815px){
+  
+
+    .left-container{
+        float: top;
+        width: 50vw;
+        text-align: center;
+        /* margin-top: 2%; */
+        /* height: 60vh; */
+        margin-bottom: 5vh;
+    }
+    .right-container{
+        float: none;
+        width: 43vw;
+        text-align: center;
+        margin-top: 8vh;
+        height: auto;
+        
+    }
+
+    .test{
+        display: visible;
+        width: 100vw;
+        height:auto;
+    }
+    
+    .images{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60vw; 
+    }
+
+    .videoClip{
+        width: 60vw;
+        height: auto;
+    }
+        
+    .scrollSection{
+        width: 60vw;
+        height: 25vh;
+    }
+   
+    .right-container{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
 
 /* @media (max-width: 480px) {
     .images{
