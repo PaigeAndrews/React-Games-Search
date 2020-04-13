@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './ItemDetail.css';
 import Zoom from 'react-reveal/Zoom';
-import Logo from './logo.png';
+import ErrorImage from './ErrorImage.png';
 import {Link} from 'react-router-dom';
 
 function ItemDetail({match}) {
@@ -57,7 +57,8 @@ function ItemDetail({match}) {
                 <h1>Oops!</h1>
                 {/* 241983 */}
                 <h2>I ate the page you're looking for</h2>
-                <Link to='/'><button> Back to home </button></Link>
+                <img className="errorImage" src={ErrorImage} alt= 'website error' />
+                <Link to='/'><button className="errorButton"> Back to Home </button></Link>
                 
               </div>
               

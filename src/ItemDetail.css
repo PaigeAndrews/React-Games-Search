@@ -153,14 +153,31 @@ a:link {
 
 
 .error-container{
-    color: red;
+    color: #00818b;
     text-align: center;
     align-items: center;
     font-size: 1rem;
-    margin-top: 8vh;
+    margin-top: 18vh;
     width: 100%;
     height: 100%;
+    border: none;
+background: none;
+}
 
+.errorButton{
+    display: block;
+    Margin: auto;
+    color: #004a50;
+   background: #20b2aa;
+   border-radius: 3px;
+   padding: 1%;
+   font-weight: bold;
+   border: 2px solid #00818b;
+}
+
+.errorImage{
+    width: auto;
+    height: 50vh;
 }
 
 h1{
