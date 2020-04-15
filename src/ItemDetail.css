@@ -55,21 +55,14 @@ body{
 }
 
 .images{
-  /* border-radius: 7px; */
-  /* display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5%;
-  max-width: 50%; */
  margin-left: 3vw;
   margin-top: 11vh;
-  /* border: 2px solid #7c7186; */
   border-color: rgb(182, 13, 13);
   border-width: thick;
   border-style: ridge ridge ridge ridge;
   width: 50vw; 
   height: auto;
-  max-height: 80vh;
+  max-height: 70vh;
   }
 
 .videoClip{
@@ -187,6 +180,10 @@ a:link {
 .errorImage{
     width: auto;
     height: 50vh;
+}
+
+.noImage{
+    border: none;
 }
 
 h1{

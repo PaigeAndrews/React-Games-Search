@@ -67,10 +67,18 @@ function ItemDetail({match}) {
           } else{
             return(
               <div>
-                <img alt='' src={item.background_image} className="images"/>
-
+                {(() => {
+                  if(!item.background_image){
+                    return (
+                      <img alt='' src={item.background_image} className="images noImage"/>
+                    )
+                    }else{ return(
+                      <img alt='' src={item.background_image} className="images"/>
+                      )
+                    } 
+                  })()}
                  {/* left container under game image */}
-                 <div className="left-container displayNone">
+                <div className="left-container displayNone">
                   <h1 className="title displayNone">{item.name}</h1>
                   <div className="publisher displayNone">{publisher}</div>
                   <h2 className="displayNone">Released: {item.released}</h2>
