@@ -16,7 +16,6 @@ function App() {
         <Nav />
         <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/about" component={About} />
         <Route path="/games" exact component={Games} />
       
         <Route path="/games/:id" component={ItemDetail} />

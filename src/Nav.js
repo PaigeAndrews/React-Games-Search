@@ -10,9 +10,7 @@ function Nav() {
             <img  src={require("D:/programming/react/routing/src/controllerLogo.png")}  />
         </Link>
         <ul className="nav-links">
-            <Link className="nav-style" to='/about'>
-                <li>About</li>
-            </Link>
+            
             <Link className="nav-style" to='/games'>
                 <li>Games</li>
             </Link>

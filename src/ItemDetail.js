@@ -69,6 +69,15 @@ function ItemDetail({match}) {
               <div>
                 <img alt='' src={item.background_image} className="images"/>
 
+                 {/* left container under game image */}
+                 <div className="left-container displayNone">
+                  <h1 className="title displayNone">{item.name}</h1>
+                  <div className="publisher displayNone">{publisher}</div>
+                  <h2 className="displayNone">Released: {item.released}</h2>
+                  <div className="rating displayNone">{rating}</div>
+                  <div><a className="gameLink displayNone" href={item.website}>Visit {item.name}'s website</a></div>
+                </div>
+
                 {/* right container beside game image */}
                 <div className="right-container">
                   <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`} frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
@@ -81,12 +90,12 @@ function ItemDetail({match}) {
                 </div>
 
                 {/* left container under game image */}
-                <div className="left-container">
-                  <h1 className="title">{item.name}</h1>
-                  <div className="publisher">{publisher}</div>
-                  <h2>Released: {item.released}</h2>
-                  <div className="rating">{rating}</div>
-                  <div><a className="gameLink" href={item.website}>Visit {item.name}'s website</a></div>
+                <div className="left-container display">
+                  <h1 className="title display">{item.name}</h1>
+                  <div className="publisher display">{publisher}</div>
+                  <h2 className="display">Released: {item.released}</h2>
+                  <div className="rating display">{rating}</div>
+                  <div><a className="gameLink display" href={item.website}>Visit {item.name}'s website</a></div>
                 </div>
 
                   {/* right-bottom container under game description scroll bar */}
