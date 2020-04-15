@@ -1,8 +1,8 @@
 
 import React, {useState, useEffect} from 'react';
-import './ItemDetail.css';
+import '../Styles/ItemDetail.css';
 import Zoom from 'react-reveal/Zoom';
-import ErrorImage from './ErrorImage.png';
+import ErrorImage from '../Images/ErrorImage.png';
 import {Link} from 'react-router-dom';
 
 function ItemDetail({match}) {

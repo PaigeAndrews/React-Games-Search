@@ -1,6 +1,6 @@
 import React from 'react';
-import './Home.css';
-import Random from './random.png';
+import '../Styles/Home.css';
+import Random from '../Images/random.png';
 import Slideshow from './Slide';
 import {Link} from 'react-router-dom';
 // import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";

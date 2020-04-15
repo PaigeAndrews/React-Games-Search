@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
-import './Games.css';
+import '../Styles/App.css';
+import '../Styles/Games.css';
 import {Link} from 'react-router-dom';
 
 function Games() {

@@ -1,10 +1,9 @@
 import React from 'react';
-import Nav from './Nav';
-import './App.css';
-import About from './About';
-import Home from './Home';
-import Games from './Games';
-import ItemDetail from './ItemDetail';
+import Nav from './Components/Nav';
+import './Styles/App.css';
+import Home from './Components/Home';
+import Games from './Components/Games';
+import ItemDetail from './Components/ItemDetail';
 import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 
 

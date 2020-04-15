@@ -1,8 +1,7 @@
 import React from 'react'
-import './Slide.css';
+import '../Styles/Slide.css';
 import { Slide } from 'react-slideshow-image';
 import {Link} from 'react-router-dom';
-import './Slide.css';
 
 const images = [
     'https://media.rawg.io/media/games/d89/d89bd0cf4fcdc10820892980cbba0f49.jpg',
