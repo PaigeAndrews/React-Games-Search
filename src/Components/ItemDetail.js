@@ -44,7 +44,35 @@ function ItemDetail({match}) {
       }
     }
 
-  
+    function myFunction(){
+      return (
+        <div className="error-container"> 
+          {/* <div img src="D:\programming\react\routing\src\logo.png"> </div> */}
+            <h1>Oops!</h1>
+            {/* 241983 */}
+            <h2>I ate the page you're looking for</h2>
+            <img className="errorImage" src={ErrorImage} alt= 'website error' />
+            <Link to='/'><button className="errorButton"> Back to Home </button></Link>
+          </div>
+      );
+      
+    }
+
+    function resolveAfter2Seconds() {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve('resolved')
+        }, 2000);
+        myFunction()
+      });
+    }
+
+    async function asyncCall() {
+      console.log('calling');
+      const result = await resolveAfter2Seconds();
+      console.log(result);
+      // expected output: 'resolved'
+    }
 
   return (
     
@@ -52,16 +80,11 @@ function ItemDetail({match}) {
         {(() => {
            if(!item.name){
             return (
+              <div>
+              {asyncCall()}
               
-              <div className="error-container"> 
-              {/* <div img src="D:\programming\react\routing\src\logo.png"> </div> */}
-                <h1>Oops!</h1>
-                {/* 241983 */}
-                <h2>I ate the page you're looking for</h2>
-                <img className="errorImage" src={ErrorImage} alt= 'website error' />
-                <Link to='/'><button className="errorButton"> Back to Home </button></Link>
-                
               </div>
+              
               
             )
           } else{
