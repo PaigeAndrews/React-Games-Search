@@ -4,7 +4,6 @@ html{
 
 body{
   font-family: 'Audiowide', cursive;
-  /* background-image: url(""); */
   width: 100%;
   height: auto;
 }
@@ -47,7 +46,6 @@ nav{
   height: 8vh;
   background: rgb(56, 80, 88);
   background: rgb(82, 117, 115);
-  /* background: rgb(17, 100, 96); */
   color: white;
   width: 100%;
   position: fixed;
@@ -86,8 +84,3 @@ a:link {
     font-size: 1.5rem;
   }
 }
-/* @media not all and (max-width: 480px) {
-  .hide-desktop {
-    display: none;
-  }
-} */

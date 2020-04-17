@@ -15,6 +15,19 @@ function ItemDetail({match}) {
       document.body.scrollTop = 0;
     }, []);
   
+    
+      const [isDivVisible , setIsDivVisible ] = useState(false);
+
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setIsDivVisible(true)
+          console.log('5 seconds later')
+        }, 5000);
+        return () => clearTimeout(timer);
+      }, []);
+    
+     
+    
    
     
     const [item, setItem] = useState({});
@@ -44,45 +57,45 @@ function ItemDetail({match}) {
       }
     }
 
-    function myFunction(){
-      return (
-        <div className="error-container"> 
-          {/* <div img src="D:\programming\react\routing\src\logo.png"> </div> */}
-            <h1>Oops!</h1>
-            {/* 241983 */}
-            <h2>I ate the page you're looking for</h2>
-            <img className="errorImage" src={ErrorImage} alt= 'website error' />
-            <Link to='/'><button className="errorButton"> Back to Home </button></Link>
-          </div>
-      );
+    // function myFunction(){
+    //   return (
+    //     <div className="error-container">
+    //         <h1>Oops!</h1>
+    //         {/* 241983 */}
+    //         <h2>I ate the page you're looking for</h2>
+    //         <img className="errorImage" src={ErrorImage} alt= 'website error' />
+    //         <Link to='/'><button className="errorButton"> Back to Home </button></Link>
+    //       </div>
+    //   );
       
-    }
+    // }
 
-    function resolveAfter2Seconds() {
-      return new Promise(resolve => {
-        setTimeout(() => {
-          resolve('resolved')
-        }, 2000);
-        myFunction()
-      });
-    }
-
-    async function asyncCall() {
-      console.log('calling');
-      const result = await resolveAfter2Seconds();
-      console.log(result);
-      // expected output: 'resolved'
-    }
+    // const add5SecondsDelay = () => {
+    //   return new Promise(resolve => {
+    //     setTimeout(() => {
+    //       resolve(myFunction());
+    //     }, 5000);
+    //   });
+    // }
+    
+    // async function asyncFunctionCall() { 
+    //   const result = await add5SecondsDelay ();
+    // }
+    
 
   return (
-    
     <div className="detail-container">
         {(() => {
            if(!item.name){
             return (
               <div>
-              {asyncCall()}
-              
+                isDivVisible ? 
+                <div className="error-container">
+                  <h1>Oops!</h1>
+                  <h2>I ate the page you're looking for</h2>
+                  <img className="errorImage" src={ErrorImage} alt= 'website error' />
+                  <Link to='/'><button className="errorButton"> Back to Home </button></Link>
+                  </div> : null
               </div>
               
               
@@ -91,16 +104,18 @@ function ItemDetail({match}) {
             return(
               <div>
                 {(() => {
+                  // if no Image from API remove image border
                   if(!item.background_image){
                     return (
                       <img alt='' src={item.background_image} className="images noImage"/>
                     )
-                    }else{ return(
+                    }else{ 
+                      return(
                       <img alt='' src={item.background_image} className="images"/>
                       )
                     } 
                   })()}
-                 {/* left container under game image */}
+                 {/* game information only shown for mobile */}
                 <div className="left-container displayNone">
                   <h1 className="title displayNone">{item.name}</h1>
                   <div className="publisher displayNone">{publisher}</div>
@@ -109,10 +124,9 @@ function ItemDetail({match}) {
                   <div><a className="gameLink displayNone" href={item.website}>Visit {item.name}'s website</a></div>
                 </div>
 
-                {/* right container beside game image */}
+                {/* video trailor and scroll section paragraph */}
                 <div className="right-container">
-                  <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`} frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
-                  </iframe>
+                  <iframe className="videoClip" src={`https://www.youtube.com/embed/${youTube}`} frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" />
                   <section className="scrollSection">
                     <Zoom ssrFadeout>
                       <div className="itemPara" dangerouslySetInnerHTML={{__html: item.description}} />
@@ -120,7 +134,7 @@ function ItemDetail({match}) {
                   </section>
                 </div>
 
-                {/* left container under game image */}
+                {/* game information only shown for desktop */}
                 <div className="left-container display">
                   <h1 className="title display">{item.name}</h1>
                   <div className="publisher display">{publisher}</div>
@@ -129,18 +143,15 @@ function ItemDetail({match}) {
                   <div><a className="gameLink display" href={item.website}>Visit {item.name}'s website</a></div>
                 </div>
 
-                  {/* right-bottom container under game description scroll bar */}
+                  {/* bottom containing genres and plaforms of game */}
                 <div className="right-bottom-container">
                   <div className="platforms-genres-container" >{genres.map(genre => { return(<div className="genreEach">{genre}</div>)}) }</div>
                   <div className="platforms-genres-container">{platforms.map(plat => { return(<div className="platformEach">{plat}</div>)}) }</div>
                 </div>
-                {/* {
-                  error && <div className="errorMessage">No additional data on this title</div>
-                } */}
-                </div>
+              </div>
                 )
               } 
-              })()}
+        })()}
       </div>
   );
 }

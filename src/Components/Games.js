@@ -102,7 +102,7 @@ function Games() {
          }
          
          <button className="buttonPage" onClick={function(){loadMoreCommit()}}>
-         Next page
+            Next page
         </button>
      </div>
      
@@ -110,30 +110,30 @@ function Games() {
       {items.map(item => (
        
         <div className="shop-item">
-       <Link to={`/games/${item.id}`}> 
-       <div className="game-title " key={item.id}>
-         {/* adding title length restriction */}
-         {(() => {
-           if(item.name.length >20){
-            return (
-              <div>
-              <div className="mobile-hide">{item.name.substring(0, 19) + "..."}</div>
-              <div className="desktop-hide">{item.name}</div>
-              </div>
-            )
-          } else{
-            return(
-              <div>{item.name}</div>
-            )
-          } 
-          })()}
-        </div>
+        <Link to={`/games/${item.id}`}> 
+          <div className="game-title " key={item.id}>
+          {/* adding title length restriction */}
+          {(() => {
+            if(item.name.length >20){
+              return (
+                <div>
+                <div className="mobile-hide">{item.name.substring(0, 19) + "..."}</div>
+                <div className="desktop-hide">{item.name}</div>
+                </div>
+              )
+            } else{
+              return(
+                <div>{item.name}</div>
+              )
+            } 
+            })()}
+          </div>
 
-        {/* game image */}
-        <img alt='' className="game-images" src={item.background_image} />
+          {/* game image */}
+          <img alt='' className="game-images" src={item.background_image} />
         </Link>
         </div>
-        ))}
+      ))}
         
         {/* changing pages */}
         <div className="pageButtonContainer">
@@ -144,7 +144,7 @@ function Games() {
             </button>
             }
            <button className="buttonPage" onClick={function(){loadMoreCommit()}}>
-            Next page
+              Next page
            </button>
         </div>
     </div>

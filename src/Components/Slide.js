@@ -25,8 +25,7 @@ const Slideshow = () => {
     return (
         <div className="containerSlide">
              
-            <Slide {...proprietes}
-            >
+            <Slide {...proprietes}>
                 
                  <div className="each-slide">
                     <div>

@@ -1,18 +1,7 @@
-body{
-    /* overflow: hidden; */
-}
 
 .detail-container{
-    /* text-align: center; 
-    align-items: center;
-   justify-content: center; */
    height: 100vh;
 }
-
-/* .image-container{
-    display: inline;
-} */
-
 
 .right-container{
     float: right;
@@ -27,8 +16,6 @@ body{
     float: left;
     width: 50vw;
     text-align: center;
-    /* margin-top: 2%; */
-    /* height: 60vh; */
     margin-bottom: 5vh;
 }
 
@@ -42,10 +29,8 @@ body{
 }
 
 .title{
-    /* margin-top: 11vh; */
     display: inline-block;
     vertical-align: top;
-    
 } 
 
 .test{
@@ -146,7 +131,6 @@ a:link {
     text-align: center;
     align-items: center;
     padding: 1%;
-    /* margin-bottom: 5%; */
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     width: 100px;
@@ -188,7 +172,6 @@ a:link {
 
 h1{
     display: inline;
-    
 }
 
 h2{
@@ -212,18 +195,12 @@ h2{
         display: none;
     }
     .left-container{
-        /* position: absolute;
-        top: 30vh; */
         margin-left: auto;
         margin-right: auto;
-        /* margin-left: 10%;
-        margin-right: 10%; */
         align-items: center;
         width: 70vw;
         float: none;
         text-align: center;
-        /* margin-top: 2%; */
-        /* height: 60vh; */
         margin-bottom: 5vh;
     }
     .right-container{
@@ -234,18 +211,17 @@ h2{
         text-align: center;
         margin-top: 4vh;
         height: auto;
-        
     }
     
-.right-bottom-container{
-    float: none;
-    width: 45vw;
-    text-align: center;
-    margin-top: 1vh;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
+    .right-bottom-container{
+        float: none;
+        width: 45vw;
+        text-align: center;
+        margin-top: 1vh;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
     .images{
         display: block;
@@ -298,25 +274,3 @@ h2{
     }
 
 }
-
-
-
-/* @media (max-width: 480px) {
-    .images{
-        max-width: 70%;
-    }
-    .platforms{
-        padding-top: 3%;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    
-}
-
-
-@media only screen and (min-width: 900px) {
-    /* .videoClip{
-        width: 420px;
-        height: 315px;
-    } */
- 
