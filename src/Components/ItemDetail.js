@@ -22,7 +22,7 @@ function ItemDetail({match}) {
         const timer = setTimeout(() => {
           setIsDivVisible(true)
           console.log('5 seconds later')
-        }, 5000);
+        }, 2000);
         return () => clearTimeout(timer);
       }, []);
     
@@ -57,50 +57,25 @@ function ItemDetail({match}) {
       }
     }
 
-    // function myFunction(){
-    //   return (
-    //     <div className="error-container">
-    //         <h1>Oops!</h1>
-    //         {/* 241983 */}
-    //         <h2>I ate the page you're looking for</h2>
-    //         <img className="errorImage" src={ErrorImage} alt= 'website error' />
-    //         <Link to='/'><button className="errorButton"> Back to Home </button></Link>
-    //       </div>
-    //   );
-      
-    // }
-
-    // const add5SecondsDelay = () => {
-    //   return new Promise(resolve => {
-    //     setTimeout(() => {
-    //       resolve(myFunction());
-    //     }, 5000);
-    //   });
-    // }
-    
-    // async function asyncFunctionCall() { 
-    //   const result = await add5SecondsDelay ();
-    // }
-    
 
   return (
     <div className="detail-container">
         {(() => {
            if(!item.name){
             return (
+              isDivVisible ? 
               <div>
-                isDivVisible ? 
                 <div className="error-container">
                   <h1>Oops!</h1>
                   <h2>I ate the page you're looking for</h2>
                   <img className="errorImage" src={ErrorImage} alt= 'website error' />
                   <Link to='/'><button className="errorButton"> Back to Home </button></Link>
-                  </div> : null
+                </div> 
               </div>
+              : null
               
-              
-            )
-          } else{
+              )
+            } else{
             return(
               <div>
                 {(() => {
