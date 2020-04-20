@@ -10,18 +10,14 @@ import {HashRouter as Router, Switch, Route} from 'react-router-dom';
 function App() {
   return (
     <Router>
-  
       <div className="App">
         <Nav />
         <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/games" exact component={Games} />
-      
         <Route path="/games/:id" component={ItemDetail} />
-        
         </Switch>
       </div>
-    
     </Router>
   );
 }

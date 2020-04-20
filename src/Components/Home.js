@@ -3,12 +3,6 @@ import '../Styles/Home.css';
 import Random from '../Images/random.png';
 import Slideshow from './Slide';
 import {Link} from 'react-router-dom';
-// import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import '../node_modules/mdbreact/docs/css/mdb.min.css';
-// import '@fortawesome/fontawesome-free/css/all.min.css';
-// import 'bootstrap-css-only/css/bootstrap.min.css';
-// import 'mdbreact/dist/css/mdb.css';
 
 function Home() {
 

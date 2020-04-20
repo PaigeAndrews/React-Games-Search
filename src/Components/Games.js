@@ -10,7 +10,6 @@ function Games() {
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
-  // const [dataPage, setdataPage] = useState([]);
 
     useEffect(() => {
     fetchItems();
@@ -128,8 +127,6 @@ function Games() {
             } 
             })()}
           </div>
-
-          {/* game image */}
           <img alt='' className="game-images" src={item.background_image} />
         </Link>
         </div>
