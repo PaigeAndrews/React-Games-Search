@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/React-Games-Search/static/css/main.8cb6de5d.chunk.css",
-    "main.js": "/React-Games-Search/static/js/main.a7d65db5.chunk.js",
-    "main.js.map": "/React-Games-Search/static/js/main.a7d65db5.chunk.js.map",
+    "main.css": "/React-Games-Search/static/css/main.de6155cc.chunk.css",
+    "main.js": "/React-Games-Search/static/js/main.ea245c47.chunk.js",
+    "main.js.map": "/React-Games-Search/static/js/main.ea245c47.chunk.js.map",
     "runtime-main.js": "/React-Games-Search/static/js/runtime-main.c1b2064b.js",
     "runtime-main.js.map": "/React-Games-Search/static/js/runtime-main.c1b2064b.js.map",
     "static/css/2.b328fd89.chunk.css": "/React-Games-Search/static/css/2.b328fd89.chunk.css",
     "static/js/2.d9fd46d0.chunk.js": "/React-Games-Search/static/js/2.d9fd46d0.chunk.js",
     "static/js/2.d9fd46d0.chunk.js.map": "/React-Games-Search/static/js/2.d9fd46d0.chunk.js.map",
     "index.html": "/React-Games-Search/index.html",
-    "precache-manifest.e39f297072d7ce3d9705aa9d6d7155e6.js": "/React-Games-Search/precache-manifest.e39f297072d7ce3d9705aa9d6d7155e6.js",
+    "precache-manifest.2a5459bfaef5cc9c72210d3345ab06e2.js": "/React-Games-Search/precache-manifest.2a5459bfaef5cc9c72210d3345ab06e2.js",
     "service-worker.js": "/React-Games-Search/service-worker.js",
     "static/css/2.b328fd89.chunk.css.map": "/React-Games-Search/static/css/2.b328fd89.chunk.css.map",
-    "static/css/main.8cb6de5d.chunk.css.map": "/React-Games-Search/static/css/main.8cb6de5d.chunk.css.map",
+    "static/css/main.de6155cc.chunk.css.map": "/React-Games-Search/static/css/main.de6155cc.chunk.css.map",
     "static/js/2.d9fd46d0.chunk.js.LICENSE.txt": "/React-Games-Search/static/js/2.d9fd46d0.chunk.js.LICENSE.txt",
     "static/media/ErrorImage.png": "/React-Games-Search/static/media/ErrorImage.42d3e1b1.png",
     "static/media/controllerLogo.png": "/React-Games-Search/static/media/controllerLogo.d929e18e.png",
@@ -22,7 +22,7 @@
     "static/js/runtime-main.c1b2064b.js",
     "static/css/2.b328fd89.chunk.css",
     "static/js/2.d9fd46d0.chunk.js",
-    "static/css/main.8cb6de5d.chunk.css",
-    "static/js/main.a7d65db5.chunk.js"
+    "static/css/main.de6155cc.chunk.css",
+    "static/js/main.ea245c47.chunk.js"
   ]
 }
